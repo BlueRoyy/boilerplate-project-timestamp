@@ -32,12 +32,12 @@ app.get("/api/:date", function (req, res) {
 
   if (!isNaN(timestamp)){
     res.json({
-      "unix": Math.floor(timestamp.getTime()/1000),
+      "unix": Number(Math.floor(timestamp.getTime()/1000)),
       "utc": timestamp.toUTCString()
     });
   } else if (!isNaN(unixTimestamp)){
       res.json({
-        "unix": id,
+        "unix": Number(id),
         "utc": unixTimestamp.toUTCString()
       });
   } else {
