@@ -41,7 +41,7 @@ app.get("/api/:date", function (req, res) {
         "utc": unixTimestamp.toUTCString()
       });
   } else {
-      res.json({"Error":"Invalid date format"});
+      res.json({Error:"Invalid Date"});
   }
 });
 
