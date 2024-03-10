@@ -32,13 +32,13 @@ app.get("/api/:date", function (req, res) {
 
   if (!isNaN(timestamp)){
     res.json({
-      "unix": Number(Math.floor(timestamp.getTime()/1000)),
-      "utc": timestamp.toUTCString()
+      unix: Number(Math.floor(timestamp.getTime()/1000)),
+      utc: timestamp.toUTCString()
     });
   } else if (!isNaN(unixTimestamp)){
       res.json({
-        "unix": Number(id),
-        "utc": unixTimestamp.toUTCString()
+        unix: Number(id),
+        utc: unixTimestamp.toUTCString()
       });
   } else {
       res.json({Error:"Invalid Date"});
