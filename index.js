@@ -37,7 +37,7 @@ app.get("/api/:date", function (req, res) {
 
   if (!isNaN(timestamp)){
     res.json({
-      unix: Number(Math.floor(timestamp.getTime()/1000)),
+      unix: Number(Math.floor(timestamp.getTime())),
       utc: timestamp.toGMTString()
     });
   } else if (!isNaN(unixTimestamp)){
