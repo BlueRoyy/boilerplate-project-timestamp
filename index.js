@@ -50,7 +50,7 @@ app.get("/api/:date", function (req, res) {
     });
   } else if (!isNaN(unixTimestamp)){
       res.json({
-        unix: id,
+        unix: Number(id),
         utc: unixTimestamp.toGMTString() 
       });
   } else {
